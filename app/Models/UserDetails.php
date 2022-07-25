@@ -11,4 +11,7 @@ class UserDetails extends Model
         'user_id', 'address', 'phone', 'birth'
     ];
     protected $table = 'users_details';
+    public function user() {
+        return $this->belongsTo('App\Models\User'); // nella tabella con il foreign key
+    }
 }
